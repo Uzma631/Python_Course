@@ -1,0 +1,51 @@
+#ASSIGNMENT: DAILY ACTIVITY PLANNER
+#Ask temperature then Decide between outdoor and indoor activity
+temperature = int(input("Enter today's temperature in Celsius: ")) 
+if temperature < 15:
+    activity = "indoor reading"
+    print("It is cool today.")
+    print("Do", activity)
+else:
+    activity = "outdoor play"
+    print("It is warm today.")
+    print("Do", activity)
+ 
+#Ask whether it is raining then add rain reminder only if it is raining
+is_raining = input("Is it raining today? (yes/no): ")
+if is_raining == "yes":
+    print("Choose an indoor activity or carry an umbrella!")
+ 
+#Ask for the homework time then Decide whether study break is needed
+homework_time = int(input("Enter homework time in minutes: ")) 
+if homework_time > 60:
+    needs_break = "yes"
+    print("You have a long homework session today.")
+    print("Take a short break before your", activity)
+else:
+    needs_break = "no"
+    print("Homework time is short today.")
+    print("No long break needed before your", activity)
+ 
+# PART 7: Ask whether there is free time then Decide between hobby time and planning time
+has_free_time = input("Do you have free time today? (yes/no): ")
+if has_free_time == "yes":
+    final_task = "hobby time"
+    print("You have free time today.")
+    print("Enjoy your", final_task)
+else:
+    final_task = "planning time"
+    print("You do not have much free time today.")
+    print("Use some time for", final_task)
+ 
+#message always prints
+print("")
+print("Daily activity check complete!")
+ 
+#summary
+print("#### DAILY ACTIVITY PLANNER ####")
+print("Temperature:", temperature)
+print("Activity Chosen:", activity)
+print("Raining:", is_raining)
+print("Study Break Needed:", needs_break)
+print("Final Task:", final_task)
+print("#####################")
